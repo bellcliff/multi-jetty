@@ -29,6 +29,10 @@ public class ProjectServer extends Server implements ChildServer {
 		this.hc = new HandlerCollection();
 		this.setHandler(this.hc);
 	}
+	
+	public void setPort(int port) {
+		getConnectors()[0].setPort(port);
+	}
 
 	public boolean startService() {
 		try {

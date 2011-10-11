@@ -19,16 +19,16 @@ public class MainServer extends Server implements ParentServer {
 	static final int PORT = 28000;
 
 	public MainServer() {
-		super(80);
+		super(80);		
 	}
 
-	public ChildServer getChild(String prefix) {
-		for (ChildServer cs : list) {
-			if (cs.getPrefix().equalsIgnoreCase(prefix))
-				return cs;
-		}
-		return null;
-	}
+//	public ChildServer getChild(String prefix) {
+//		for (ChildServer cs : list) {
+//			if (cs.getPrefix().equalsIgnoreCase(prefix))
+//				return cs;
+//		}
+//		return null;
+//	}
 
 	@Override
 	public void handle(String target, Request baseRequest,

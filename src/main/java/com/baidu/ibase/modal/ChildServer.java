@@ -8,8 +8,9 @@ import org.eclipse.jetty.server.Request;
 public interface ChildServer {
 
 	int getPort();
+	void setPort(int port);
 
-	String getPrefix();
+//	String getPrefix();
 
 	boolean doHandle(String target, Request baseRequest,
 			HttpServletRequest request, HttpServletResponse response);

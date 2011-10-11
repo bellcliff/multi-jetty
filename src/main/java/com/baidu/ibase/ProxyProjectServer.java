@@ -29,6 +29,10 @@ public class ProxyProjectServer extends Server implements ProxyServer,
 		setProxy(strings);
 	}
 
+	public void setPort(int port) {
+		getConnectors()[0].setPort(port);
+	}
+	
 	public boolean checkProxy(Request baseRequest) {
 		boolean checked = false;
 		String uri = baseRequest.getRequestURI();
